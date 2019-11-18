@@ -1,0 +1,27 @@
+{
+  "name": "todos-server",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "DEBUG=* node ./bin/www",
+    "prod": "node ./bin/www",
+    "dev": "NODE_ENV=dev nodemon --watch routes --watch db ./bin/www",
+    "test": "NODE_ENV=test mocha --recursive ./test/config.js ./test",
+    "test:watch": "NODE_ENV=test nodemon -w ./db -w ./routes -w ./test -e js -x mocha --recursive ./test/config.js ./test"
+  },
+  "dependencies": {
+    "chai": "^4.2.0",
+    "cookie-parser": "~1.4.4",
+    "cors": "^2.8.5",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "mongoose": "^5.7.11",
+    "morgan": "~1.9.1",
+    "chai-http": "^4.3.0",
+    "mocha": "^6.1.4",
+    "should": "^13.2.3",
+    "should-http": "^0.1.1"
+  }
+}
